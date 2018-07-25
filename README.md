@@ -1,4 +1,5 @@
-# genoPipe by Timur Alexeev, Insight July-Aug 2018
+# genoPipe
+Timur Alexeev, Insight July-Aug 2018
 
 The Cancer Genome Atlas (TCGA) is a joint effort of the National Cancer Institute (NCI) and the National Human Genome Research Institute (NHGRI) to accelerate our understanding of the molecular basis of cancer. TCGA-funded researchers across the United States have produced a corpus of raw and processed genomic, transcriptomic, and epigenomic data from thousands of cancer patients. I am aming to set up a multipipeline system to enable high data throughput as well as CI/CD.
 
