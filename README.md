@@ -27,6 +27,7 @@ Realistic project goals are 1-4, with 4 being a deepdive. Goals 5 and 6 are ambi
 
 
 Technology description:
+
 •	Docker for containerization
 
 	o	Container platform
