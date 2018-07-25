@@ -28,15 +28,27 @@ Realistic project goals are 1-4, with 4 being a deepdive. Goals 5 and 6 are ambi
 
 Technology description:
 •	Docker for containerization
+
 	o	Container platform
+
 	o	Tool for building, distributing, and running containers
+
 •	Kubernetes for container orchestration
+
 	o	Container orchestration system
+
 	o	Automate deployment
+
 	o	Scheduling and scaling containerized applications
+
 •	Jenkins for CI (maybe Travis CI as I read it is simple to set it up on GitHub)
+
 •	Ansible for configuration and change management
+
 	o	Better security than chef
+
 	o	Fast and agent-less
+
 	o	Supports almost any language
+
 
