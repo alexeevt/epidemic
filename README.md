@@ -10,14 +10,13 @@ Resource type: S3 bucket
 Goals:
 1.	Use Docker for containerization.
 2.	Deploy multiple pipelines for data aggregationg from the hospital and the clinic using Jenkins.
-3.	Deepdive into Kubernetes for automatic deployment, scheduling, and automatic deployment when a pipeline goes down. 
-4.	Stretch goal: Fault detection
+3.	Use Kafka for streaming data.
+4.	Ansible for configuration and change management.
+5.	Deepdive into Kubernetes for scheduling, and automatic deployment when a pipeline goes down. 
+6.	Stretch goal: Fault detection
 
-• Use Kafka for streaming data.
 
-• Ansible for configuration and change management.
-	o Better security than Chef.
-	o Fast and agent-less.
-	o Supports almost any language.
+
+
 
 
