@@ -1,55 +1,23 @@
-# genoPipe
+# Epidemic
 Timur Alexeev, Insight July-Aug 2018
 
-The Cancer Genome Atlas (TCGA) is a joint effort of the National Cancer Institute (NCI) and the National Human Genome Research Institute (NHGRI) to accelerate our understanding of the molecular basis of cancer. TCGA-funded researchers across the United States have produced a corpus of raw and processed genomic, transcriptomic, and epigenomic data from thousands of cancer patients. I am aming to set up a multipipeline system to enable high data throughput as well as CI/CD.
+Epidemic is a project designed to model early detection of virus epidemic. A simple data analytics app will calculate a linear regression model (LRM) from patient post visti records. The system is comprised of two ques: 1) a high throughput hospital that will deliver patient records as streaming data 2) a small clinic that will deliver 100 records every 24 hours in a batch. An analytics app will calculate an LRM from patient data correlating post visit summary that will include patient's standard attributes such as name/age/sex, as well as temperature and whether the patient has been out of the country.
 
-Dataset: https://registry.opendata.aws/tcga/
-Use the data provided by cancer genome atlas, which contains the raw and processed genomic, transcriptomic, and epigenomic data from thousands of cancer patients
+Dataset: Simple patient post visit records will be generated for the project.
 
 Resource type: S3 bucket
 
-About the data: more than a petabyte in size,
-
-•	Problem requires high throughput workflows
-•	Various regulatory agencies have to be factored into the solution
-•	Each workload must be modified to answer domain specific questions
-•	Scientific computing has to be fast, easy, and effective
-
 Goals:
-1.	Deploy pipeline
-2.	Implement CI
-3.	Implement CD
-4.	Deepdive into Kubernetes for managing multiple pipelines 
-5.	Autoscaling
-6.	Fault detection
+1.	Use Docker for containerization.
+2.	Deploy multiple pipelines for data aggregationg from the hospital and the clinic using Jenkins.
+3.	Deepdive into Kubernetes for automatic deployment, scheduling, and automatic deployment when a pipeline goes down. 
+4.	Stretch goal: Fault detection
 
-Realistic project goals are 1-4, with 4 being a deepdive. Goals 5 and 6 are ambitious stretch goals and may not be accomplished in the given timeframe.
+• Use Kafka for streaming data.
 
-
-Technology description:
-
-•	Docker for containerization
-
-	o	Container platform
-
-	o	Tool for building, distributing, and running containers
-
-•	Kubernetes for container orchestration
-
-	o	Container orchestration system
-
-	o	Automate deployment
-
-	o	Scheduling and scaling containerized applications
-
-•	Jenkins for CI (maybe Travis CI as I read it is simple to set it up on GitHub)
-
-•	Ansible for configuration and change management
-
-	o	Better security than chef
-
-	o	Fast and agent-less
-
-	o	Supports almost any language
+• Ansible for configuration and change management.
+	o Better security than Chef.
+	o Fast and agent-less.
+	o Supports almost any language.
 
 
