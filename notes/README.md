@@ -1,11 +1,7 @@
 # Notes on technologies
 Timur Alexeev, 2018
 
-## Terraform
-
-Use: Write, plan, and create infrastructure as code (IaC)
-
-### File System:
+## File System:
 HDFS:
 A distributed file system that protects from machine and network failure by storing large blocks of data redundantly. The Hadoop Distributed File System (HDFS) typically stores three copies of the blocks on a cluster of “worker” machines, with the meta-data that tracks the blocks maintained by a single “master” machine. HDFS is one of the most ubiquitous technologies, and works well as a source of truth for almost every other technology.
 
@@ -27,7 +23,7 @@ Formerly known as Tachyon, Alluxio is a distributed file system that aims to pro
 Ceph:
 Ceph is an open source distributed storage system for objects, blocks, and files. Ceph is specifically designed to scale without a single point of failure and supports auto-healing. At this point Ceph is still fairly academic, but is has a few notable users such as Bloomberg, Cisco, and DreamHost.
 
-#### Ingestion:
+## Ingestion:
 Ingestion is the process of collecting data from real-time and static sources. Many tools are available for ensuring that data can be collected reliably by a distributed cluster of machines, even when the machines or network are imperfect.
 
 Kafka:
@@ -58,7 +54,7 @@ A tool for bulk transfer of data between relational databases and Hadoop. Sqoop 
 ActiveMQ:
 A more “traditional” message broker that offers a respectable feature set similar to RabbitMQ. ActiveMQ trades raw performance to enable support for protocols such as AMQP, MQTT, and more. While not the most performant or most feature rich tool, it has been called the swiss army knife of message queues for its all-around ability.
 
-##### Batch Processing:
+## Batch Processing:
 Batch processing is the general process of computing information from vast amounts of “bounded” data by using a distributed cluster of machines, typically over the course of several minutes or hours. The MapReduce paradigm for parallel programming has been the standard, but there are other alternatives developing.
 
 Spark:
@@ -92,7 +88,7 @@ A graph processing tool for the Hadoop ecosystem. Giraph distributes graphs acro
 Spark GraphX:
 A graph computation tool that uses Spark’s RDD framework. GraphX represents graphs as tables that can be distributed and processed in parallel across a cluster, and allows users to explore graphs interactively. While GraphX is a new project with fewer algorithms than GraphLab and Giraph, it is has better development features such as SQL integration.
 
-###### Unified Processing
+## Unified Processing
 As the most recent generation of distributed computing frameworks have matured, they have have also begun to reimagine the data pipelines more fundamentally. In line with the paradigm shift of the Kappa architecture, many technologies are now take the view that batch processing problems are simply a subset of stream processing problem. These tools in particular have created abstraction for operators that can be run on batch and streaming data sets as well as the required underlying architecture.
 
 Flink:
@@ -119,7 +115,7 @@ Gearpump is an Apache incubator project which features a light-weight, high thro
 Onyx:
 Onyx is a distributed stream processing engine that aims to leverage Clojure's feature set in the distributed environment. Touting pure functional operators, immutability, and a host of streaming primitives, it presents a very clean and attractive API. While still an early-stage project, Onyx has a number of features that make it appealing, particularly to Clojure developers.
 
-####### Stream Processing:
+## Stream Processing:
 Unlike batch processing, streaming technologies can process real-time data and events in milliseconds, allowing computations that would be too complicated with messaging queues alone. There are several solutions that support different levels of throughput and guarantees that the data processed, even when machines or the network fails.
 
 Spark Streaming:
@@ -146,7 +142,7 @@ Notably limited to Javascript (as of now), Google's 'serverless' offering is cap
 Heron:
 Twitter’s successor to Storm that aims to be more performant at scale as well as easier to deploy and debug all while retaining backwards compatibility. Heron features a simplified processing architecture as well as an improved inter-process communication (IPC) layer. Beyond Twitter, Heron has been adopted at the likes of Microsoft and other organizations that have exceptionally low latency stream processing requirements.
 
-######## Data Store
+## Data Store
 Once data has been processed by the streaming or batch computations, it needs to be stored in a way that can be quickly accessed by the end user or data scientist. While file systems are designed to store data durably, databases organize data in a way that minimizes unnecessary disk seeks and network transfers to provide the quickest response to queries. There are hundreds of options for databases and finding the correct one that organizes data correctly for a specific use case is one of the most important decisions for data engineers.
 
 MySQL
@@ -187,7 +183,7 @@ A document oriented technology, optimized for searching text data. Elasticsearch
 AWS RDS:
 A database service on AWS for managed instances of MySQL, Oracle, Postgres, and other popular relational databases. While RDS provides the same functionality of traditional relational systems, vertical scaling and maintenance is easier with Amazon. This provides a cost-effective and simple way to build operational databases, without having to learn new technologies.
 
-######### Other technologies
+## Other technologies
 Mesos:
 Cluster resource management system that provides efficient resource insolation and sharing across distributed applications.
 Fault tolerance and disaster recovery.
