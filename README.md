@@ -23,6 +23,7 @@ Resource type: S3 bucket
 * Deploy multiple pipelines for data aggregationg for billing and clinical records using Jenkins.
 * Use Docker for containerization.
 * Kubernetes or Mesos for container orchestration and scaling.
+* Pass streaming and batch data through Kafka.
 * Check quality of data using Spark Streaming.
 
 ## Pipeline:
