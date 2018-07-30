@@ -10,17 +10,21 @@ The project will build a data pipeline that takes streaming data in the form of 
 
 I am interested in looking at automatic granular scaliing and stress testing. While many tools such as terraform or mesos support automatic scaling, it is often difficult to set this up in a granular way. For instance, if you manage a pipeline including a web server and a spark cluster, it is most likely that they do not need to be scaled at the same time.
 
+## Goals
+* Orchestrate containers.
+* Automation and efficient scaling.
 
-### Technology summary
+## Technology
 
 Dataset: Simple patient records and post visit summary will be generated for this project. Each patient's data will include 1.3 GB of images and 10 pages of text records. I will use CT images of phantoms from my previous research and generate arbitrary text data to mimic patient health history and diagnosis.
 
 Resource type: S3 bucket
 
-1. Use Docker for containerization.
-2. Deploy multiple pipelines for data aggregationg for billing and clinical records using Jenkins.
-3. Check quality of data using Spark Streaming.
+* Deploy multiple pipelines for data aggregationg for billing and clinical records using Jenkins.
+* Use Docker for containerization.
+* Kubernetes or Mesos for container orchestration and scaling.
+* Check quality of data using Spark Streaming.
 
-### Pipeline:
+## Pipeline:
 
 <img src="img/.png" width="800"> 

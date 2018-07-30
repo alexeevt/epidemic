@@ -193,5 +193,31 @@ A toolkit and runtime for building highly concurrent, distributed, and resilient
 
 
 
+# Docker VS Kubernetes VS Apache Mesos
+
+## Docker
+
+* Packages the application and libraries into a single package - applications can be consistently deployed across multiple environments.
+* Provides Git-like semantics - e.g. "docker push" "docker commit" etc.
+* Define Docker images as immutable layers - easy to reuse images and track changes.
+
+## Kubernetes
+
+* Designed to orchestrate Docker containers without having to orchestrate the unrelying infrastructure.
+* Provide standard deployment interface.
+* Build on a Modular API core
+
+## Apache Mesos
+
+* Abstract data center resources to simplify resource allocation.
+* Collocate diverse workloads on the same infrastructure to improve utilization and reduce footprint and cost - e.g. analytics, stateless microservices, distributed data service, and traditional apps.
+* Automate day-two operations - deployment, healing, scaling, and upgrades, thus providing a highly available fault tollerant infrastructure.
+* Provide evergreen extensibility
+* Elastically scale application and underlying infrastruture
+
+
+
+
+
 
 
